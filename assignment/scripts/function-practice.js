@@ -42,11 +42,11 @@ console.log(multiplyThree(2, 3, 5));
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(num1) {
-  if ( num1 < 0 ){
-    return console.log('false');
+  if ( num1 >= 0 ){
+    return true;
   }
     else {
-      return console.log('true');
+      return false;
     }
   }
 
@@ -65,7 +65,7 @@ console.log(isPositive(-3));
 let items = ['cup,', 'poster', 'phone', 'scissors', 'screen'];
 
 function getLast( array ) {
- return array.at(-1);
+ return array[array.length - 1];
 }
 
 console.log(getLast(items));
@@ -77,17 +77,21 @@ console.log(getLast(items));
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 
 let someNumbers = [1, 4, 5, 9, 7];
+let someMoreNumbers = [2, 6, 9, 14, 13];
 
-function find( num1, array ){
-  if (array === num1) {
-  return ('true');
-  }
-    else{
-      return ('false');
+function findArrayValue( num1, array ){
+  for (i = 0; i < array.length; i++) {
+    if (array[i] === num1) {
+     return true;
+    }
+      else {
+        return false;
+      }
     }
 }
 
-console.log(find(5, someNumbers));
+
+console.log(findArrayValue(14, someMoreNumbers));
 
 // ----------------------
 // Stretch Goals
@@ -116,3 +120,4 @@ function sumAll( ) {
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
